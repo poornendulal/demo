@@ -1,0 +1,84 @@
+package demo;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.internal.MouseAction.Button;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+public class SeleniumSample {
+	public static void main(String[] args) throws InterruptedException {
+    	System.setProperty("webdriver.firefox.marionette","");
+		WebDriver driver = new FirefoxDriver();
+        String baseUrl = "c:\\index.html";
+        driver.get(baseUrl);
+
+        WebDriverWait waiter = new WebDriverWait(driver, 30);
+        WebElement webElement1a = waiter.until(ExpectedConditions.visibilityOfElementLocated(By.id("userName")));
+        webElement1a.sendKeys("tutorial");
+        //System.out.println(webElement1a.getAttribute("Type"));
+        
+        WebElement webElement1b = waiter.until(ExpectedConditions.visibilityOfElementLocated(By.id("password")));
+       webElement1b.sendKeys("test");
+        //System.out.println(webElement1b.getAttribute("Type"));
+        
+        WebElement webElement2 = waiter.until(ExpectedConditions.visibilityOfElementLocated(By.id("submit")));
+        //System.out.println(webElement2.getAttribute("Type").toString());
+        webElement2.click();
+        
+        
+      
+        WebElement webElement3 = waiter.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Flights")));
+       // System.out.println(webElement3.getTagName());
+        webElement3.click();
+        
+        WebElement webElement4 = waiter.until(ExpectedConditions.visibilityOfElementLocated(By.name("tripType")));
+       // System.out.println(webElement4.getTagName());
+       // webElement4.click();
+        
+
+        WebElement element[]= {webElement1a, webElement1b, webElement2,webElement3};
+      	String testdata[] = {"username","password"};
+      	
+        //new SeleniumSample().generalize(element,testdata);
+        
+        driver.quit();
+	}
+	public void generalize(WebElement element[], String testdata[]) throws InterruptedException
+	{
+		int j=0, i=0;
+		for( i=0;i<element.length;i++)
+		{
+			System.out.println(i +" and "+ j);
+			if(element[i].getTagName().toString().equalsIgnoreCase("input"))
+			{
+				System.out.println(element[i].getTagName().toString()+" control to be processed.");
+				if(element[i].getAttribute("Type").toString().equalsIgnoreCase("text")||element[i].getAttribute("Type").toString().equalsIgnoreCase("password"))
+				{
+					System.out.println(element[i].getAttribute("Type").toString()+" Type identified. SendKeys command will be performed.");
+					element[i].sendKeys(testdata[j]);
+					j++;
+				}else if(element[i].getAttribute("Type").toString().equalsIgnoreCase("button")||element[i].getAttribute("Type").toString().equalsIgnoreCase("submit"))
+				{
+					System.out.println(element[i].getAttribute("Type").toString()+" Type identified. Click command will be performed.");
+					element[i].click();
+					if(i<element.length) 
+					{
+						System.out.println(i+"Element length is "+element.length +". Hence wait for the next element to load.");
+						Thread.sleep(5000);
+					}else
+					{
+						System.out.println("This is the last element. Element length is "+element.length);
+						Thread.sleep(5000);
+					}
+				}
+			}else if (element[i].getTagName().toString().equalsIgnoreCase("a"))
+			{
+				System.out.println(element[i].getTagName().toString()+" control identified. Click command will be processed.");
+				element[i].click();
+			}
+		}
+	}
+
+}

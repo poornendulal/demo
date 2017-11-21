@@ -1,0 +1,11 @@
+#application url : 
+url = https://applicationsstage.labor.state.nyenet/SharedWorkPlan/Home.faces
+#DataPool Details
+#Excel Data Pool
+fileName = ./setup/testdata/sharedwork/TestDataTemplate.xls
+sheetName = SharedWork
+columnHeader = Script Name
+# database Data Pool
+server = 
+username = 
+password = 
