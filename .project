@@ -14,4 +14,21 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>src/demo/index.html</name>
+			<type>1</type>
+			<location>C:/index.html</location>
+		</link>
+		<link>
+			<name>src/demo/index1.html</name>
+			<type>1</type>
+			<location>C:/index1.html</location>
+		</link>
+		<link>
+			<name>src/demo/index2.html</name>
+			<type>1</type>
+			<location>C:/index2.html</location>
+		</link>
+	</linkedResources>
 </projectDescription>

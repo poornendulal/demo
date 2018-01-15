@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="31" started-at="2017-11-21T12:14:55Z" finished-at="2017-11-21T12:14:55Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="31" started-at="2017-11-21T12:14:55Z" finished-at="2017-11-21T12:14:55Z">
+      <class name="demo.demo.AutomationTest">
+        <test-method status="PASS" signature="clicklink()[pri:0, instance:demo.demo.AutomationTest@2344fc66]" name="clicklink" duration-ms="16" started-at="2017-11-21T17:44:55Z" finished-at="2017-11-21T17:44:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clicklink -->
+        <test-method status="PASS" signature="login()[pri:0, instance:demo.demo.AutomationTest@2344fc66]" name="login" duration-ms="0" started-at="2017-11-21T17:44:55Z" finished-at="2017-11-21T17:44:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="clicklinkfailed()[pri:0, instance:demo.demo.AutomationTest@2344fc66]" name="clicklinkfailed" duration-ms="0" started-at="2017-11-21T17:44:55Z" finished-at="2017-11-21T17:44:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clicklinkfailed -->
+      </class> <!-- demo.demo.AutomationTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

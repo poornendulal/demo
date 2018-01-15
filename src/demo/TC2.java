@@ -1,8 +1,8 @@
 package demo;
 
-public class TC01 {
+public class TC2 {
 	public static void main(String[] args) {
-		System.setProperty("webdriver.firefox.marionette", "");
+		 System.setProperty("webdriver.firefox.marionette", "");
 
 		char operation[] = { 'i', 'i', 'b', 'd', 'v', 'a', 'r', 'v' };
 		String control[] = { "userName", "password", "submit", "dropdownid", "divverify", "Flights", "tripType",
@@ -14,7 +14,4 @@ public class TC01 {
 		automate.run(init.driver, operation, control, testdata);
 		init.driver.quit();
 	}
-
-	TC01 tc01 = new TC01();
-		//tc01.main(args);
 }
