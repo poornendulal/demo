@@ -10,7 +10,7 @@ public boolean run(WebDriver driver, char[] operation, String[] control, String[
 	try{
 		int j=0; 
 		int i=0; 
-		int k=0;;;;
+		int k=0;
 		for( i=0;i<operation.length;i++){
 			System.out.println("Loop counters value i=" + i +" and j="+ j +" and k="+k);
 			if (operation[i]=='i'){
