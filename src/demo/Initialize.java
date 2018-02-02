@@ -10,7 +10,7 @@ public class Initialize {
 	protected WebDriver driver = new InternetExplorerDriver();
 	public Initialize(String URL) throws InterruptedException {
 		System.out.println("test");
-		driver.manage().window().setSize(new Dimension(500,500));
+		//driver.manage().window().setSize(new Dimension(500,500));
 		
     driver.get(URL);
 
