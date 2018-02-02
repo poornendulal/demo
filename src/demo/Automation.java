@@ -13,7 +13,7 @@ import org.testng.Assert;
 public class Automation {
 	public boolean run(WebDriver driver, char operation[], String control[], String testdata[]) {
 		try {
-			int j = 0, i, k = 0;
+			int j = 0, i, k = 0;;
 			for (i = 0; i < operation.length; i++) {
 				System.out.println("Loop counters value i=" + i + " and j=" + j + " and k=" + k);
 				if (operation[i] == 'i') {
