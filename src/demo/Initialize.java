@@ -6,10 +6,10 @@ import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 public class Initialize {
 	protected WebDriver driver = new HtmlUnitDriver();
 
-	public Initialize(String URL) {
+	public Initialize(String url) {
 		System.out.println("test");
 
-		driver.get(URL);
+		driver.get(url);
 
 		System.out.println(getCallerClassName());
 	}
