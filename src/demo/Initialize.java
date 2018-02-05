@@ -7,11 +7,10 @@ public class Initialize {
 	protected WebDriver driver = new HtmlUnitDriver();
 
 	public Initialize(String url) {
-		System.out.println("test");
+		
 
 		driver.get(url);
 
-		System.out.println(getCallerClassName());
 	}
 
 	public static String getCallerClassName() {

@@ -49,7 +49,7 @@ public class SOAP {
 			File file = new File(xmlfile); // If you want to write as file to local.
 			callxmlwrite(xmlResponse, file);
 		} catch (Exception e) {
-			System.out.println(e.getMessage());
+			System.exit(1);
 		}
 	}
 
@@ -58,8 +58,6 @@ public class SOAP {
 		try {
 			fileWriter.write(xmlResponse.toString());
 
-		} catch (Exception e1) {
-			System.out.println(e1.getMessage());
 		} finally {
 			fileWriter.close();
 		}
