@@ -9,8 +9,6 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-import org.testng.xml.XmlTest;
-
 public class SOAP {
 
 	public static void main(String[] args) {
@@ -47,18 +45,18 @@ public class SOAP {
 
 			BufferedReader reader = new BufferedReader(new InputStreamReader(xml));
 			String line = "";
-			String xmlResponse = "";
+			StringBuilder xmlResponse = new StringBuilder();
 			while ((line = reader.readLine()) != null) {
-				xmlResponse += line;
+				xmlResponse = xmlResponse.append(line);
 			}
 
 			File file = new File("c:\\test.xml"); // If you want to write as file to local.
 			FileWriter fileWriter = new FileWriter(file);
-			fileWriter.write(xmlResponse);
+			fileWriter.write(xmlResponse.toString());
 			fileWriter.close();
 
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.out.println(e.getMessage());
 		}
 	}
 

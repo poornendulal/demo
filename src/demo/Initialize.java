@@ -6,7 +6,7 @@ import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 public class Initialize {
 	protected WebDriver driver = new HtmlUnitDriver();
 
-	public Initialize(String URL) throws InterruptedException {
+	public Initialize(String URL) {
 		System.out.println("test");
 
 		driver.get(URL);

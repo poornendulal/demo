@@ -4,7 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Automation {
@@ -20,8 +19,7 @@ public class Automation {
 					WebElement webElement1a = waiter
 							.until(ExpectedConditions.visibilityOfElementLocated(By.id(control[j++])));
 					System.out.println(webElement1a.getAttribute("Type")
-							+ " Type identified. SendKeys command will be performed with '" + testdata[k]
-							+ "' test data.");
+							+ " Type identified. SendKeys command will be performed with '" + testdata[k]);
 					webElement1a.sendKeys(testdata[k++]);
 				} else if (operation[i] == 'b') {
 					WebDriverWait waiter = new WebDriverWait(driver, 30);
@@ -48,7 +46,6 @@ public class Automation {
 					WebDriverWait waiter = new WebDriverWait(driver, 30);
 					WebElement webElement1a = waiter
 							.until(ExpectedConditions.visibilityOfElementLocated(By.id(control[j++])));
-					Select dropdown = new Select(webElement1a);
 					System.out.println(
 							webElement1a.getTagName() + " control identified. Select command will be performed with '"
 									+ testdata[k] + "' test data.");
