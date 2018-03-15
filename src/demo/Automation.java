@@ -26,7 +26,7 @@ public class Automation {
 				} else if (operation[i] == 'b') {
 					WebDriverWait waiter = new WebDriverWait(driver, 30);
 					WebElement webElement1a = waiter
-							.until(ExpectedConditions.visibilityOfElementLocated(By.id(control[j++])));
+							.until(ExpectedConditions.visibilityOfElementLocated(By.name(control[j++])));
 					log.append(
 							webElement1a.getAttribute("Type") + " Type identified. Click command will be performed.");
 					webElement1a.click();

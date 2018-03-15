@@ -5,11 +5,10 @@ public class TC01 {
 		System.out.println("hellow ");
 		
 		System.setProperty("webdriver.ie.driver", "C:\\iedriver\\IEDriverServer.exe");
-		char[] operation = { 'i', 'i', 'b', 'd', 'v', 'a', 'r', 'v' };
-		String[] control = { "userName", "password", "submit", "dropdownid", "divverify", "Flights", "tripType",
-				"verify" };
-		String[] testdata = { "username", "password", "Option1", "div", "Verification" };
-		Initialize init = new Initialize("http://www.yahoo.com");
+		char[] operation = { 'i', 'b', 'v'};
+		String[] control = { "lst-ib", "btnK", "resultStats" };
+		String[] testdata = { "test", "seconds"};
+		Initialize init = new Initialize("http://www.google.com");
 		
 		Automation automate = new Automation();
 		automate.run(init.driver, operation, control, testdata);
