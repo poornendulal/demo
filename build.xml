@@ -8,10 +8,8 @@
     <property name="debuglevel" value="source,lines,vars"/>
     <property name="target" value="1.8"/>
     <property name="source" value="1.8"/>
-    <path id="org.testng.TESTNG_CONTAINER.libraryclasspath"/>
     <path id="demo.classpath">
         <pathelement location="bin"/>
-        <path refid="org.testng.TESTNG_CONTAINER.libraryclasspath"/>
         <pathelement location="jars/selenium-server-standalone-3.11.0.jar"/>
     </path>
     <target name="init">

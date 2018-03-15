@@ -7,7 +7,7 @@ public class TC01 {
 		System.setProperty("webdriver.ie.driver", "C:\\iedriver\\IEDriverServer.exe");
 		char[] operation = { 'i', 'b', 'v'};
 		String[] control = { "lst-ib", "btnK", "resultStats" };
-		String[] testdata = { "test", "seconds"};
+		String[] testdata = { "this is automation test engineering demo", "seconds"};
 		Initialize init = new Initialize("http://www.google.com");
 		
 		Automation automate = new Automation();
