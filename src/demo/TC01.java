@@ -8,7 +8,7 @@ public class TC01 {
 		char[] operation = { 'i', 'b', 'v'};
 		String[] control = { "lst-ib", "btnK", "resultStats" };
 		String[] testdata = { "this is automation test engineering demo", "seconds"};
-		Initialize init = new Initialize("http://www.google.com");
+		Initialize init = new Initialize("https://www.google.co.uk");
 		
 		Automation automate = new Automation();
 		automate.run(init.driver, operation, control, testdata);

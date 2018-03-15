@@ -1,5 +1,7 @@
 package demo;
 
+import java.util.logging.Level;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -8,6 +10,7 @@ public class Initialize {
 	protected WebDriver driver = new HtmlUnitDriver();
 
 	public Initialize(String url) {
+		java.util.logging.Logger.getLogger("com.gargoylesoftware").setLevel(Level.OFF); 
 		driver.get(url);
 	}
 
